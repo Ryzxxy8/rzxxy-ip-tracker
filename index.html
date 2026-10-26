@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080d0a">
+    <title>RZXXY IP TRACKER</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <h1><span>RZXXY</span> IP TRACKER</h1>
+        <p>CYBERSECURITY DASHBOARD</p>
+        <div class="status">
+            <span class="dot"></span> SYSTEM ONLINE
+        </div>
+    </header>
+    <main class="container">
+        <section class="hero">
+            <p class="label">NETWORK INTELLIGENCE</p>
+            <h2>IP Address Lookup</h2>
+            <p class="description">
+                Explore public IP information and network details.
+            </p>
+            <form id="lookup-form">
+                <input
+                    id="ip-input"
+                    type="text"
+                    placeholder="Enter IP address (e.g. 8.8.8.8)"
+                    aria-label="IP address"
+                    autocomplete="off"
+                >
+                <button type="submit">SCAN IP ↗</button>
+            </form>
+            <p id="message" role="status">
+                Ready to start a lookup.
+            </p>
+        </section>
+        <section class="grid">
+            <article class="card">
+                <span class="card-label">IP ADDRESS</span>
+                <h3 id="ip">---</h3>
+            </article>
+            <article class="card">
+                <span class="card-label">COUNTRY</span>
+                <h3 id="country">---</h3>
+            </article>
+            <article class="card">
+                <span class="card-label">CITY</span>
+                <h3 id="city">---</h3>
+            </article>
+            <article class="card">
+                <span class="card-label">ISP / NETWORK</span>
+                <h3 id="isp">---</h3>
+            </article>
+            <article class="card">
+                <span class="card-label">REGION</span>
+                <h3 id="region">---</h3>
+            </article>
+            <article class="card">
+                <span class="card-label">TIMEZONE</span>
+                <h3 id="timezone">---</h3>
+            </article>
+        </section>
+        <section class="notice">
+            <h3>⚠ PRIVACY NOTICE</h3>
+            <p>
+                IP geolocation is approximate. This dashboard does not
+                identify a person's exact home address or prove their identity.
+                Only investigate systems you are authorized to examine.
+            </p>
+        </section>
+        <footer>
+            <p>RZXXY IP TRACKER <span>•</span> LEARN. BUILD. SECURE.</p>
+            <p>Personal cybersecurity learning project.</p>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+:root {
+    --bg: #080d0a;
+    --panel: #101a14;
+    --border: #243c2c;
+    --green: #39ff88;
+    --text: #e4f5e9;
+    --muted: #8ba795;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+}
+
+.topbar {
+    padding: 28px 7%;
+    background: #0c130e;
+    border-bottom: 1px solid var(--border);
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: clamp(22px, 5vw, 34px);
+    letter-spacing: 1px;
+}
+
+.topbar h1 span {
+    color: var(--green);
+    text-shadow: 0 0 15px #39ff8844;
+}
+
+.topbar p {
+    margin: 5px 0 12px;
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--green);
+    font-size: 12px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 10px var(--green);
+}
+
+.container {
+    width: min(100% - 32px, 1000px);
+    margin: 40px auto;
+}
+
+.hero {
+    padding: clamp(22px, 5vw, 40px);
+    background: linear-gradient(145deg, #122219, #0b110d);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 0 35px #39ff8808;
+}
+
+.label {
+    color: var(--green);
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.hero h2 {
+    margin: 8px 0;
+    font-size: clamp(25px, 5vw, 38px);
+}
+
+.description {
+    color: var(--muted);
+}
+
+#lookup-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+#ip-input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    background: #080d0a;
+    border: 1px solid #34513d;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+#ip-input:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 12px #39ff8822;
+}
+
+button {
+    padding: 14px 20px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--green);
+    color: #07110a;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0 0 18px #39ff8855;
+}
+
+button:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+#message {
+    color: var(--muted);
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.card {
+    min-width: 0;
+    padding: 22px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.card:hover {
+    border-color: var(--green);
+    transform: translateY(-2px);
+}
+
+.card-label {
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.card h3 {
+    margin: 12px 0 0;
+    color: var(--green);
+    font-size: clamp(16px, 3vw, 22px);
+    overflow-wrap: anywhere;
+}
+
+.notice {
+    margin-top: 24px;
+    padding: 20px;
+    background: #17170e;
+    border: 1px solid #49421e;
+    border-radius: 12px;
+}
+
+.notice h3 {
+    color: #f5d76e;
+    font-size: 14px;
+}
+
+.notice p {
+    color: #b9b5a0;
+    font-size: 13px;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+footer span {
+    color: var(--green);
+}
+
+@media (max-width: 520px) {
+    .topbar {
+        padding: 22px 18px;
+    }
+
+    .container {
+        width: calc(100% - 24px);
+        margin: 24px auto;
+    }
+
+    #lookup-form {
+        flex-direction: column;
+    }
+
+    #lookup-form button {
+        width: 100%;
+    }
+
+    .grid {
+        gap: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
